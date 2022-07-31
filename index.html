@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url(https://fonts.google.com/specimen/Montserrat);
+    @import url(https://fonts.google.com/specimen/Fraunces);
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body {
+      background-color: antiquewhite;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .parent {
+      display: flex;
+      justify-content: center;
+      justify-self: center;
+      margin: 40px 0;
+    }
+    img {
+      width: 250px;
+      height: 400px;
+    }
+    #mobile {
+      display: none;
+    }
+    #desk {
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      transition: 1s ease-in-out;
+    }
+    .description {
+      height: 400px;
+      width: 250px;
+      background-color: white;
+      padding-left: 15px;
+      position: relative;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      transition: 1s ease-in-out;
+    }
+    .description:hover {
+        border: 1px solid #0ff;
+        cursor: pointer;
+      }
+    #per {
+      font-size: 14px;
+      padding-top: 7px;
+    }
+    #gabriel {
+      font-size: 38px;
+      font-weight: 800;
+      margin-top: -3px;
+      font-family: 'Fraunces', serif;
+    }
+    .price {
+      margin-bottom: 10px;
+      margin-top: -5px;
+    }
+    #norm {
+      text-decoration: line-through;
+    }
+    #discounted {
+      font-size: xx-large;
+      font-weight: 700;
+      margin: 0 20px 0 0;
+      color: #0ff;
+    }
+    #cart {
+      text-decoration: none;
+      border: 1px solid rgb(1, 5, 17);
+      font-size: 16px;
+      justify-content: center;
+      padding: 10px 68px;
+      position: absolute;
+      margin-top: 5px;
+      text-align: center;
+      color: #fff;
+      background-color: #0ff;
+      border-radius: 10px;
+    }
+    #cart:hover {
+      background-color: #0b0;
+    }
+    #shortdes {
+      margin-top: -18px;
+      font-size: 17px;
+    }
+    #icon {
+      width: 15px;
+      height: 15px;
+      padding-right: 10px;
+    }
+    @media(max-width: 700px) {
+      .parent {
+        display: grid;
+        grid-template-rows: 25% 75%;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+      }
+      #desk {
+        display: none;
+      }
+      #mobile {
+        display: block;
+        width: 315px;
+        height: 200px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transition: 1s ease-in-out;
+      }
+      .description {
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+        width: 300px;
+        transition: 1s ease-in-out;
+      }
+      #mobile:hover {
+        border-top: 1px solid #0ff;
+        cursor: pointer;
+      }
+      #cart {
+        padding: 15px 65px;
+        font-size: 25px;
+      }
+      #icon {
+      width: 20px;
+      height: 20px;
+    }
+      #shortdes {
+      margin-top: -16px;
+      font-size: 20px;
+    }
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="image">
+      <img id="desk" src="images/image-product-desktop.jpg" alt="">
+      <img id="mobile" src="images/image-product-mobile.jpg" alt="">
+    </div>
+    <div class="description">
+      <p id="per">PERFUME</p>
+      <p id="gabriel">Gabrielle Essence Eau De Parfum</p>
+      <p id="shortdes">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+        <div class="price">
+          <span id="discounted">$149.99</span>
+          <span id="norm">$169.99</span>
+        </div>
+        <a href="" id="cart"><img id="icon" src="images/icon-cart.svg" alt="">Add to Cart</a>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Oluwatobi Amure</a>.
+  </div>
+  <script>
+    const cart = document.querySelector('#cart')
+    cart.addEventListener('click', () => alert('Item has been successfully added'))
+  </script>
+</body>
+</html>
