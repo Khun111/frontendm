@@ -90,3 +90,4 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+This was good practice. Been a long while and I haven't had the time to take up mire challenges from frontend mentor. 
